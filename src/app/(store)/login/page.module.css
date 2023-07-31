@@ -1,0 +1,38 @@
+.grid {
+  padding: var(--page-margin);
+  display: grid;
+  gap: var(--page-margin);
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.loginpermanent {
+  margin-left: 0.5rem;
+}
+
+.loginbutton {
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 47rem) {
+  .grid {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 80rem) {
+  .grid {
+    width: 100%;
+  }
+}
+@media (min-width: 80rem) {
+  .grid {
+    width: 80%;
+    justify-content: center;
+  }
+}

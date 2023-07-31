@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: var(--page-margin);
+  border-bottom: var(--size-border) solid transparent;
+}
+
+.homelink {
+  color: black;
+  font-family: var(--fontfamily-montserrat);
+  font-size: calc(1.5rem + 1.5vw);
+}
+
+.arrow {
+  fill: black;
+  display: inline;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+.logo {
+  height: calc(2.5rem + 0.25vw);
+  fill: black;
+}
+
+.homepagecontainer {
+  scroll-snap-type: both mandatory;
+  overflow: scroll;
+}
+
+.homepageitem {
+  scroll-snap-align: start;
+}
+
+.headerspace {
+  padding-top: calc(4rem + 0.25vw);
+}
+
+.homepagecontainer {
+  --fslayout-itemsize: 0.85;
+  height: 100vh;
+  grid-auto-flow: column;
+}
+.homepagecontainer .homepageitem {
+  height: 100vh;
+  width: calc(100vw * var(--fslayout-itemsize));
+}
+.homepagecontainer .homepageitem:last-child {
+  width: 100vw;
+}
+
+@media (max-width: 85rem) {
+  .homepagecontainer {
+    grid-auto-flow: row;
+  }
+  .homepagecontainer .homepageitem {
+    width: 100vw;
+    height: calc(100vh * var(--fslayout-itemsize));
+  }
+  .homepagecontainer .homepageitem:last-child {
+    height: 100vh;
+  }
+}
+
+.dotcontainer {
+  display: flex;
+  padding: var(--page-margin);
+  justify-content: flex-end;
+  gap: 0.15rem;
+  position: absolute;
+  width: 100%;
+}
+
+.dot {
+  height: 1rem;
+  fill: black;
+}
+
+.dotfaded {
+  opacity: 0.35;
+}
